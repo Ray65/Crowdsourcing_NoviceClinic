@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("https://crowd.ecn.purdue.edu/01/clinic", function(result){
+          
+ $.each(result, function(Task, results_from_workers){
+                $("div").append("<p>"+Task+ results_from_workers+"</p>");
+            });
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
+
+</body>
+</html>
