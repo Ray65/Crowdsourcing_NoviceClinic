@@ -1,1 +1,0 @@
-This folder contains the UX/UI code for the Accept/Reject Accordion.
